@@ -64,7 +64,7 @@ scoreboard:
     - "&b&l» &fClan: &d%clan%"
     - "&b&l» &fKills: &c%kills%"
     - "&b&l» &fPlaytime: &b%playtime%"
-    - " "
+    - "&b&l» &fLevel: &a%level% &7(%exp% xp)"
     - "&7%ip%"
 
 rank:
@@ -79,7 +79,7 @@ spawners:
   enabled: true
   cycle-seconds: 15       # how often every spawner 'produces'
   mobs-per-cycle: 4       # mobs each spawner counts per cycle (x stack size)
-  max-stack: 10000         # max spawners in one stack
+  max-stack: 1000         # max spawners in one stack
   storage-per-spawner: 1000   # item capacity per spawner in the stack
   require-silk-touch: false    # silk touch needed to pick spawners up
   # price is what /spawner shop charges. Drops are sold at shop.yml sell prices.
