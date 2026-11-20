@@ -187,10 +187,13 @@ public class Board implements Listener {
                 .replace("%deaths%", String.valueOf(deaths))
                 .replace("%kdr%", String.format(Locale.US, "%.2f", kdr))
                 .replace("%playtime%", p.duration(secs))
-                .replace("%ip%", p.getConfig().getString("scoreboard.server-ip", "play.saikomc.net"))
+                .replace("%ip%", p.getConfig().getString("scoreboard.server-ip", "saikoo.play.hosting"))
                 .replace("%online%", String.valueOf(Bukkit.getOnlinePlayers().size()))
                 .replace("%max%", String.valueOf(Bukkit.getMaxPlayers()))
-                .replace("%ping%", String.valueOf(pl.getPing()));
+                .replace("%ping%", String.valueOf(pl.getPing()))
+                .replace("%level%", String.valueOf(pl.getLevel()))
+                .replace("%exp%", p.shortNum(pl.getTotalExperience()))
+                .replace("%exp_full%", String.format("%,d", pl.getTotalExperience()));
         if (s.contains("%rank%")) s = s.replace("%rank%", p.hooks().rank(pl));
         if (s.contains("%clan%")) s = s.replace("%clan%", p.hooks().clan(pl));
         if (s.indexOf('%') >= 0) s = p.hooks().papi(pl, s); // any other PlaceholderAPI placeholder
