@@ -6,7 +6,7 @@ starting-balance: 500
 
 gambling:
   min-bet: 10
-  max-bet: 100000
+  max-bet: 10000000000000
   cooldown-seconds: 3
   house-edge-percent: 5        # cut taken from coinflip/dice profit
   broadcast-wins-over: 100000000000   # announce big wins to the server
@@ -72,7 +72,7 @@ rank:
   fallback: "Member"
 
 clan:
-  placeholder: "%clan_name%"
+  placeholder: "%clan_name_formatted%"
   none-text: "None"
 # ===== Spawners (the shop catalog itself is in shop.yml) =====
 spawners:
